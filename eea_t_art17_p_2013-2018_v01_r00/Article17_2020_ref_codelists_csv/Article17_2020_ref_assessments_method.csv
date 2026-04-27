@@ -1,0 +1,14 @@
+﻿code,label
+0EQ,Conclusions for a parameter are the same for all MS within the region
+0MS,"The habitat or species only occurs in one MS within the region so, unless there are good reasons, the MS assessment is also the EU regional assessment"
+1,"Parameter assessed using the evaluation matrix after summing the MS data. This should only be used for range, population (species) and area (habitat)"
+2GD,Parameter weighted by area of distribution from GIS data
+2XA,Parameter weighted by area of the coverage from XML data (habitats only)
+2XP,Parameter weighted by population from XML data (species only)
+2XR,Parameter weighted by range from XML data
+3GD,Overall conclusion weighted by area of distribution from GIS data
+3XA,Overall conclusion weighted by area from XML data (habitats only)
+3XP,Overall conclusion weighted by population from XML data (species only)
+3XR,Overall conclusion weighted by range from XML data
+MTX,"Overall conclusion assessed from assessments using methods 1 or 2 of the 4 parameters, using the last row of the evaluation matrix (only used for overall Conservation Status)"
+OTH,"Other method was used, explanations provided in Audit trail"

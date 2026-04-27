@@ -3,3 +3,6 @@ __pycache__/
 .pytest_cache/
 *.accdb
 .streamlit/
+settings.local.json
+eea_t_art17_p_2013-2018_v01_r00/Article17_2020_dataset_mdb/
+eea_t_art17_p_2013-2018_v01_r00/Documents/
