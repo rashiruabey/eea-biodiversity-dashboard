@@ -1,0 +1,5 @@
+﻿code,label,convert
+D,Deteriorating,-
+I,Improving,+
+S,Stable,=
+Unk,Unknown,x

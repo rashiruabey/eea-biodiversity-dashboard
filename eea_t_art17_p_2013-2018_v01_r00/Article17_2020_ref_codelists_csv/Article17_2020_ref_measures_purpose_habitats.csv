@@ -1,0 +1,5 @@
+﻿code,label
+expand,Expand the current range of the habitat type (related to ‘Range’)
+increase,Increase the surface area of the habitat type (related to ‘Area covered by habitat’)
+maintain,"Maintain the current range, surface area or structure and functions of the habitat type"
+restore,"Restore the structure and functions, including the status of typical species (related to ‘Specific structure and functions’)"

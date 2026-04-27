@@ -1,0 +1,5 @@
+﻿code,label,convert
+absentData,Insufficient or no data available,d
+completeSurvey,Complete survey or a statistically robust estimate,a
+estimateExpert,Based mainly on expert opinion with very limited data,c
+estimatePartial,Based mainly on extrapolation from a limited amount of data,b

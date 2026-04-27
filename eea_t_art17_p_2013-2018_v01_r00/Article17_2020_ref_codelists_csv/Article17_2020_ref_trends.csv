@@ -1,0 +1,6 @@
+﻿code,description,trend_operator
+D,Decreasing (-),-
+I,Increasing (+),+
+S,Stable (0),=
+U,Uncertain (u),u
+Unk,Unknown (x),x

@@ -1,0 +1,23 @@
+﻿code,label
+adults,number of adults
+area,area covered by population in m2
+bfemales,number of breeding females
+cmales,number of calling males
+colonies,number of colonies
+fstems,number of flowering stems
+grids10x10,number of map 10x10 km grid cells
+grids1x1,number of map 1x1 km grid cells
+grids2x2,number of map 2x2 km grid cells
+grids5x5,number of map 5x5 km grid cells
+i,number of individuals
+iwintering,number of wintering individuals
+length,length of inhabited feature in km
+localities,number of localities
+logs,number of inhabited logs
+males,number of males
+p,number of pairs
+shoots,number of shoots
+stones,number of inhabited stones/boulders
+subadults,number of subadults
+trees,number of inhabited trees
+tufts,number of tufts

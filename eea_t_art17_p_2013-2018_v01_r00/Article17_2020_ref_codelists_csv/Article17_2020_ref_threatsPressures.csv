@@ -1,0 +1,236 @@
+﻿code,label
+A,Agriculture
+A01,Conversion into agricultural land (excluding drainage and burning)
+A02,Conversion from one type of agricultural land use to another (excluding drainage and burning)
+A03,Conversion from mixed farming and agroforestry systems to specialised (e.g. single crop) production
+A04,Changes in terrain and surface of agricultural areas
+A05,"Removal of small landscape features for agricultural land parcel consolidation (hedges, stone walls, rushes, open ditches, springs, solitary trees, etc.)"
+A06,Abandonment of grassland management (e.g. cessation of grazing or mowing)
+A07,Abandonment of management/use of other agricultural and agroforestry systems (all except grassland)
+A08,Mowing or cutting of grasslands
+A09,Intensive grazing or overgrazing by livestock
+A10,Extensive grazing or undergrazing by livestock
+A11,Burning for agriculture
+A12,Suppression of fire for agriculture
+A13,Reseeding of grasslands and other semi-natural habitats
+A14,Livestock farming (without grazing)
+A15,Tillage practices (e.g. ploughing) in agriculture
+A16,Other soil management practices in agriculture
+A17,Harvesting of crops and cutting of croplands
+A18,Irrigation of agricultural land
+A19,Application of natural fertilisers on agricultural land
+A20,Application of synthetic (mineral) fertilisers on agricultural land
+A21,Use of plant protection chemicals in agriculture
+A22,Use of physical plant protection in agriculture
+A23,Use of other pest control methods in agriculture (excluding tillage)
+A24,Waste management practices in agriculture
+A25,Agricultural activities generating point source pollution to surface or ground waters
+A26,Agricultural activities generating diffuse pollution to surface or ground waters
+A27,Agricultural activities generating air pollution
+A28,Agricultural activities generating marine pollution
+A29,Agricultural activities generating soil pollution
+A30,"Active abstractions from groundwater, surface water or mixed water for agriculture"
+A31,Drainage for use as agricultural land
+A32,Development and operation of dams for agriculture
+A33,Modification of hydrological flow or physical alteration of water bodies for agriculture (excluding development and operation of dams)
+A34,Introduction and spread of new crops (including GMOs)
+A35,Agricultural crops for renewable energy production
+A36,Agriculture activities not referred to above
+B,Forestry
+B01,"Conversion to forest from other land uses, or afforestation (excluding drainage)"
+B02,Conversion to other types of forests including monocultures
+B03,Replanting with or introducing non-native or non-typical species (including new species and GMOs)
+B04,Abandonment of traditional forest management
+B05,Logging without replanting or natural regrowth
+B06,Logging (excluding clear cutting) of individual trees
+B07,"Removal of dead and dying trees, including debris"
+B08,Removal of old trees (excluding dead or dying trees)
+B09,"Clear-cutting, removal of all trees"
+B10,Illegal logging
+B11,Cork extraction and forest exploitation excluding logging
+B12,Thinning of tree layer
+B13,Burning for forestry
+B14,Suppression of fire for forestry
+B15,Forest management reducing old growth forests
+B16,Wood transport
+B17,Tillage practices in forestry and other soil management practices in forestry
+B18,Application of natural fertilisers
+B19,"Application of synthetic fertilisers in forestry, including liming of forest soils"
+B20,Use of plant protection chemicals in forestry
+B21,"Use of physical plant protection in forestry, excluding tree layer thinning"
+B22,Use of other pest control methods in forestry
+B23,Forestry activities generating pollution to surface or ground waters
+B24,Forestry activities generating air pollution
+B25,Forestry activities generating marine pollution
+B26,Forestry activities generating soil pollution
+B27,"Modification of hydrological conditions, or physical alteration of water bodies and drainage for forestry (including dams)"
+B28,Forests for renewable energy production
+B29,"Other forestry activities, excluding those relating to agro-forestry"
+C,"Extraction of resources (minerals, peat, non-renewable energy resources)"
+C01,"Extraction of minerals (e.g. rock, metal ores, gravel, sand, shell)"
+C02,Extraction of salt
+C03,"Extraction of oil and gas, including infrastructure"
+C04,Coal mining
+C05,Peat extraction
+C06,Dumping/depositing of inert materials from terrestrial extraction
+C07,Dumping/depositing of dredged materials from marine extraction
+C08,Abandonment or conversion of saltpans
+C09,Geotechnical surveying
+C10,Extraction activities generating point source pollution to surface or ground waters
+C11,Extraction activities generating diffuse pollution to ground or surface waters
+C12,Extraction activities generating marine pollution
+C13,"Extraction activities generating noise, light or other forms of pollution"
+C14,Abstraction of surface and ground water for resource extraction
+C15,Mining and extraction activities not referred to above
+D,Energy production processes and related infrastructure development
+D01,"Wind, wave and tidal power, including infrastructure"
+D02,"Hydropower (dams, weirs, run-off-the-river), including infrastructure"
+D03,"Solar power, including infrastructure"
+D04,Geothermal power generation (including infrastructure)
+D05,"Development and operation of energy production plants (including bioenergy plants, fossil and nuclear energy plants)"
+D06,Transmission of electricity and communications (cables)
+D07,Oil and gas pipelines
+D08,Energy production and transmission activities generating pollution to surface or ground waters
+D09,Energy production and transmission activities generating air pollution
+D10,Energy production and transmission activities generating marine pollution
+D11,Energy production and transmission activities generating noise pollution
+D12,"Energy production and transmission activities generating light, heat or other forms pollution"
+D13,Abstraction of surface and ground water for energy production (excluding hydropower)
+D14,Energy production and transmission activities not referred to above
+E,Development and operation of transport systems
+E01,"Roads, paths, railroads and related infrastructure (e.g. bridges, viaducts, tunnels)"
+E02,Shipping lanes and ferry lanes transport operations
+E03,"Shipping lanes, ferry lanes and anchorage infrastructure (e.g. canalisation, dredging)"
+E04,"Flight paths of planes, helicopter and other non-leisure aircrafts"
+E05,"Land, water and air transport activities generating pollution to surface or ground waters"
+E06,"Land, water and air transport activities generating air pollution"
+E07,"Land, water and air transport activities generating marine pollution"
+E08,"Land, water and air transport activities generating noise, light and other forms of pollution"
+E09,"Land, water and air transport activities not referred to above"
+F,"Development, construction and use of residential, commercial, industrial and recreational infrastructure and areas"
+F01,"Conversion from other land uses to housing, settlement or recreational areas (excluding drainage and modification of coastline, estuary and coastal conditions)"
+F02,Construction or modification (e.g. of housing and settlements) in existing urban or recreational areas
+F03,"Conversion from other land uses to commercial / industrial areas (excluding drainage and modification of coastline, estuary and coastal conditions)"
+F04,Construction or modification of commercial / industrial infrastructure in existing commercial / industrial areas
+F05,"Creation or development of sports, tourism and leisure infrastructure (outside the urban or recreational areas)"
+F06,Development and maintenance of beach areas for tourism and recreation incl. beach nourishment and beach cleaning
+F07,"Sports, tourism and leisure activities"
+F08,"Modification of coastline, estuary and coastal conditions for development, use and protection of residential, commercial, industrial and recreational infrastructure and areas (including sea defences or coastal protection works and infrastructures)"
+F09,Deposition and treatment of waste/garbage from household/recreational facilities
+F10,Deposition and treatment of waste/garbage from commercial and industrial facilities
+F11,Pollution to surface or ground water due to urban run-offs
+F12,Discharge of urban waste water (excluding storm overflows and/or urban run-offs) generating pollution to surface or ground water
+F13,"Plants, contaminated or abandoned industrial sites generating pollution to surface or ground water"
+F14,Other residential and recreational activities and structures generating point pollution to surface or ground waters
+F15,Other industrial and commercial activities and structures generating point pollution to surface or ground waters
+F16,Other residential and recreational activities and structures generating diffuse pollution to surface or ground waters
+F17,Other industrial and commercial activities and structures generating diffuse pollution to surface or ground waters
+F18,Residential and recreational activities and structures generating air pollution
+F19,Industrial and commercial activities and structures generating air pollution
+F20,Residential or recreational activities and structures generating marine pollution (excl. marine macro- and micro-particular pollution)
+F21,Industrial or commercial activities and structures generating marine pollution (excluding marine macro- and micro-particular pollution)
+F22,"Residential or recreational activities and structures generating marine macro- and micro- particulate pollution (e.g. plastic bags, Styrofoam)"
+F23,"Industrial or commercial activities and structures generating marine macro- and micro- particulate pollution (e.g. plastic bags, Styrofoam)"
+F24,"Residential or recreational activities and structures generating noise, light, heat or other forms of pollution"
+F25,"Industrial or commercial activities and structures generating noise, light, heat or other forms of pollution"
+F26,"Drainage, land reclamation and conversion of wetlands, marshes, bogs, etc. to settlement or recreational areas"
+F27,"Drainage, land reclamation or conversion of wetlands, marshes, bogs, etc. to industrial/commercial areas"
+F28,"Modification of flooding regimes, flood protection for residential or recreational development"
+F29,Construction or development of reservoirs and dams for residential or recreational development
+F30,Construction or development of reservoirs and dams for industrial or commercial development
+F31,Other modification of hydrological conditions for residential or recreational development
+F32,Other modification of hydrological conditions for industrial or commercial development
+F33,Abstraction of ground and surface waters (including marine) for public water supply and recreational use
+F34,Abstraction of ground and surface waters (including marine) for commercial/industrial use (excluding energy)
+G,Extraction and cultivation of biological living resources (other than agriculture and forestry)
+G01,"Marine fish and shellfish harvesting (professional, recreational) causing reduction of species/prey populations and disturbance of species"
+G02,Marine fish and shellfish processing
+G03,"Marine fish and shellfish harvesting (professional, recreational) activities causing physical loss and disturbance of seafloor habitats"
+G04,Marine plant harvesting
+G05,Freshwater fish and shellfish harvesting (professional)
+G06,Freshwater fish and shellfish harvesting (recreational)
+G07,Hunting
+G08,Management of fishing stocks and game
+G09,Harvesting or collecting of other wild plants and animals (excluding hunting and leisure fishing)
+G10,Illegal shooting/killing
+G11,"Illegal harvesting, collecting and taking"
+G12,Bycatch and incidental killing (due to fishing and hunting activities)
+G13,Poisoning of animals (excluding lead poisoning)
+G14,Use of lead ammunition or fishing weights
+G15,Modification of coastal conditions for marine aquaculture
+G16,Marine aquaculture generating marine pollution
+G17,Introduction and spread of species (including GMOs) in marine aquaculture
+G18,Abandonment of marine aquaculture
+G19,"Other impacts from marine aquaculture, including infrastructure"
+G20,"Abstraction of water, flow diversion, dams and other modifications of hydrological conditions for freshwater aquaculture"
+G21,Freshwater aquaculture generating point source pollution to surface or ground waters
+G22,Freshwater aquaculture generating diffuse source pollution to surface or ground waters
+G23,Freshwater aquaculture generating marine pollution
+G24,Introduction and spread of species (including alien species and GMOs) in freshwater aquaculture
+G25,Abandonment of freshwater aquaculture
+G26,"Other impacts from freshwater aquaculture, including infrastructure"
+G27,Other activities related to extraction and cultivation of biological living resources not referred to above
+H,"Military action, public safety measures, and other human intrusions"
+H01,"Military, paramilitary or police exercises and operations on land"
+H02,"Military, paramilitary or police exercises and operations in the freshwater and marine environment"
+H03,Abandonment of terrestrial military or similar exercises (loss of open habitats)
+H04,Vandalism or arson
+H05,"Tree surgery, felling/removal of roadside trees and vegetation for public safety"
+H06,Closure or restricted access to site/habitat
+H07,Intrusive and destructive research and monitoring activities
+H08,Other human intrusions and disturbance not mentioned above
+I,Alien and problematic species
+I01,Invasive alien species of Union concern
+I02,Other invasive alien species (other than species of Union concern)
+I03,DO NOT USE Other alien species (not invasive)
+I04,Problematic native species
+I05,"Plant and animal diseases, pathogens and pests"
+J,Mixed source pollution
+J01,Mixed source pollution to surface and ground waters (limnic and terrestrial)
+J02,Mixed source marine water pollution (marine and coastal)
+J03,"Mixed source air pollution, air-borne pollutants"
+J04,Mixed source soil pollution and solid waste (excluding discharges)
+J05,Mixed source excess energy
+K,Human-induced changes in water regimes
+K01,"Abstraction from groundwater, surface water or mixed water"
+K02,Drainage
+K03,Development and operation of dams
+K04,Modification of hydrological flow
+K05,Physical alteration of water bodies
+L,Natural processes (excluding catastrophes and processes induced by human activity or climate change)
+L01,"Abiotic natural processes (e.g. erosion, silting up, drying out, submersion, salinization)"
+L02,Natural succession resulting in species composition change (other than by direct changes of agricultural or forestry practices)
+L03,Accumulation of organic material
+L04,Natural processes of eutrophication or acidification
+L05,Reduced fecundity / genetic depression (e.g. inbreeding or endogamy)
+L06,"Interspecific relations (competition, predation, parasitism, pathogens)"
+L07,Absence or reduction of interspecific faunal and floral relations (e.g. pollinators)
+M,"Geological events, natural catastrophes"
+M01,Volcanic activity
+M02,"Tidal waves, tsunamis"
+M03,Earthquake
+M04,Avalanche (snow)
+M05,"Collapse of terrain, landslide"
+M06,Underground collapses (natural processes)
+M07,"Storm, cyclone"
+M08,Flooding (natural processes)
+M09,Fire (natural)
+M10,Other natural catastrophes
+N,Climate change
+N01,Temperature changes (e.g. rise of temperature & extremes) due to climate change
+N02,Droughts and decreases in precipitation due to climate change
+N03,Increases or changes in precipitation due to climate change
+N04,Sea-level and wave exposure changes due to climate change
+N05,"Change of habitat location, size, and / or quality due to climate change"
+N06,Desynchronisation of biological / ecological processes due to climate change
+N07,"Decline or extinction of related species (e.g. food source / prey, predator / parasite, symbiote, etc.) due to climate change"
+N08,Change of species distribution (natural newcomers) due to climate change
+N09,Other climate related changes in abiotic conditions
+X,"Unknown pressures, no pressures and pressures from outside the Member State"
+Xe,Threats and pressures from outside the EU territory
+Xo,Threats and pressures from outside the Member State
+Xp,No information on pressures
+Xt,No information on threats
+Xu,Unknown pressure
+Xxp,No pressures
+Xxt,No threats

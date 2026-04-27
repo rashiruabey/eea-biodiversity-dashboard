@@ -1,0 +1,119 @@
+﻿code,label
+CA,Measures related to agriculture and agriculture-related habitats
+CA01,"Prevent conversion of natural and semi-natural habitats, and habitats of species into agricultural land"
+CA02,Restore small landscape features on agricultural land
+CA03,Maintain existing extensive agricultural practices and agricultural landscape features
+CA04,"Reinstate appropriate agricultural practices to address abandonment, including mowing, grazing, burning or equivalent measures"
+CA05,"Adapt mowing, grazing and other equivalent agricultural activities"
+CA06,"Stop mowing, grazing and other equivalent agricultural activities"
+CA07,Recreate Annex I agricultural habitats
+CA08,Adapt soil management practices in agriculture
+CA09,Manage the use of natural fertilisers and chemicals in agricultural (plant and animal) production
+CA10,Reduce/eliminate point pollution to surface or ground waters from agricultural activities
+CA11,Reduce diffuse pollution to surface or ground waters from agricultural activities
+CA12,Reduce/eliminate air pollution from agricultural activities
+CA13,Reduce/eliminate marine pollution from agricultural activities
+CA14,Reduce/eliminate soil pollution from agricultural activities
+CA15,Manage drainage and irrigation operations and infrastructures in agriculture
+CA16,Other measures related to agricultural practices
+CB,Measures related to forestry and forest-related habitats
+CB01,Prevent conversion of (semi-) natural habitats into forests and of (semi-)natural forests into intensive forest plantation
+CB02,Maintain existing traditional forest management and exploitation practices
+CB03,Reinstate forest management and exploitation practices
+CB04,Adapt/manage reforestation and forest regeneration
+CB05,Adapt/change forest management and exploitation practices
+CB06,Stop forest management and exploitation practices
+CB07,Combat illegal logging
+CB08,Restoration of Annex I forest habitats
+CB09,"Manage the use of chemicals for fertilisation, liming and pest control in forestry"
+CB10,Reduce diffuse pollution to surface or ground waters from forestry activities
+CB11,Reduce air pollution from forestry activities
+CB12,Reduce marine pollution from forestry activities
+CB13,Reduce soil pollution from forestry activities
+CB14,Manage drainage and irrigation operations and infrastructures
+CB15,Other measures related to forestry practices
+CC,Measures related to resources extraction and energy production
+CC01,Adapt/manage extraction of non-energy resources
+CC02,Adapt/manage exploitation of energy resources
+CC03,"Adapt/manage renewable energy installation, facilities and operation"
+CC04,Reduce impact of hydropower operation and infrastructure
+CC05,"Adapt/manage fossil energy installation, facilities and operation"
+CC06,Reduce impact of service corridors and networks
+CC07,"Habitat restoration/creation from resources, exploitation areas or areas damaged due to installation of renewable energy infrastructure"
+CC08,Manage/reduce/eliminate point pollution to surface or ground waters from resource exploitation and energy production
+CC09,Manage/reduce/eliminate diffuse pollution to surface or ground waters from resource exploitation and energy production
+CC10,Manage/reduce/eliminate air pollution from resource exploitation and energy production
+CC11,Manage/reduce/eliminate marine pollution from resource exploitation and energy production
+CC12,"Reduce/eliminate noise, light, thermal and other forms of pollution related to resource exploitation and energy production"
+CC13,Manage water abstraction for resource extraction and energy production
+CC14,Other measures related to extraction and energy exploitation activities
+CE,Measures related to development and operation of transport systems
+CE01,Reduce impact of transport operation and infrastructure
+CE02,Manage/reduce/eliminate pollution to surface or ground water from transport
+CE03,Manage/reduce/eliminate air pollution from transport
+CE04,Manage/reduce/eliminate marine pollution from transport
+CE05,"Manage/reduce/eliminate noise, light and other forms of pollution from transport"
+CE06,Habitat restoration of areas impacted by transport
+CE07,Other measures related to transport
+CF,"Measures related to residential, commercial, industrial and recreational infrastructures, operations and activities"
+CF01,Manage conversion of land for construction and development of infrastructure
+CF02,"Habitat restoration of areas impacted by residential, commercial, industrial and recreational infrastructure, operations and activities"
+CF03,"Reduce impact of outdoor sports, leisure and recreational activities"
+CF04,"Reduce/eliminate point source pollution to surface or ground waters from industrial, commercial, residential and recreational areas and activities"
+CF05,"Reduce/eliminate diffuse pollution to surface or ground waters from industrial, commercial, residential and recreational areas and activities"
+CF06,"Reduce/eliminate air pollution from industrial, commercial, residential and recreational areas and activities"
+CF07,"Reduce/eliminate marine pollution from industrial, commercial, residential and recreational areas and activities"
+CF08,Reduce/eliminate marine contamination with litter
+CF09,"Reduce/eliminate noise, light, heat or other forms pollution from industrial, commercial, residential and recreational areas and activities"
+CF10,Manage changes in hydrological and coastal systems and regimes for construction and development
+CF11,Manage water abstraction for public supply and for industrial and commercial use
+CF12,"Other measures related to residential, commercial, industrial and recreational infrastructures, operations and activities"
+CG,Measures related to the effects of extraction and cultivation of biological living resources
+CG01,Management of professional/commercial fishing (including shellfish and seaweed harvesting)
+CG02,"Management of hunting, recreational fishing and recreational or commercial harvesting or collection of plants"
+CG03,"Reducing the impact of (re-) stocking for fishing and hunting, of artificial feeding and predator control"
+CG04,"Control/eradication of illegal killing, fishing and harvesting"
+CG05,Reduce bycatch and incidental killing of non-target species
+CG06,Reduce impact of lead poisoning
+CG07,Manage changes in coastal conditions for marine aquaculture
+CG08,Reduce/eliminate marine pollution from marine aquaculture
+CG09,Other measures to reduce impacts from marine aquaculture infrastructures and operation
+CG10,Manage water abstraction and modifications of hydrological conditions for freshwater aquaculture
+CG11,Reduce/eliminate point source pollution to surface waters from freshwater aquaculture
+CG12,Reduce/eliminate diffuse pollution to surface waters from freshwater aquaculture
+CG13,Reduce/eliminate marine pollution from freshwater aquaculture
+CG14,Other measures to reduce impacts of freshwater aquaculture infrastructures and operation
+CG15,Other measures related to exploitation of species
+CH,Measures related to military installations and activities and other specific human activities
+CH01,Reduce impact of military installations and activities
+CH02,Adapt/maintain military activities
+CH03,Reduce impact of other specific human actions
+CI,Measures related to alien and problematic native species
+CI01,Early detection and rapid eradication of invasive alien species of Union concern
+CI02,"Management, control or eradication of established invasive alien species of Union concern"
+CI03,"Management, control or eradication of other invasive alien species"
+CI04,"DO NOT USE Management, control or eradication of other alien species"
+CI05,Management of problematic native species
+CI06,Other measures related to problematic species
+CI07,"Controlling and eradicating plant and animal diseases, pathogens and pests"
+CJ,Measures related to mixed source pollution and human-induced changes in hydraulic conditions for several uses
+CJ01,Reduce impact of mixed source pollution
+CJ02,Reduce impact of multi-purpose hydrological changes
+CJ03,Restore habitats impacted by multi-purpose hydrological changes
+CJ04,Other measures related to mixed source pollution and multi-purpose human-induced changes in hydraulic conditions
+CL,"Measures related to natural processes, geological events and natural catastrophes"
+CL01,"Management of habitats (others than agriculture and forest) to slow, stop or reverse natural processes"
+CL02,Minimise/prevent impacts of geological and natural catastrophes
+CL03,Restore habitats following geological and natural catastrophes
+CL04,Other measures related to natural processes
+CN,Measures related to climate change
+CN01,Adopt climate change mitigation measures
+CN02,Implement climate change adaptation measures
+CS,Measures related to management of species from the nature directives and other native species
+CS01,Reinforce populations of species from the directives
+CS02,Reintroduce species from the directives
+CS03,Improvement of habitat of species from the directives
+CS04,Manage other native species
+CX,Measures outside the Member State
+CX01,Support conservation measures in another EU Member State
+CX02,Support conservation measures in countries outside the EU
