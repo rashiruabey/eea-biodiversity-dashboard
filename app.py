@@ -892,7 +892,26 @@ if not tbl.empty:
         if col in tbl.columns:
             tbl[col] = tbl[col].map(TREND_LABELS).fillna(tbl[col])
 
-    st.dataframe(tbl.reset_index(drop=True), use_container_width=True, height=430)
+    display_tbl = tbl.reset_index(drop=True)
+    st.markdown(
+        """
+        <style>
+        .data-tbl { width:100%; border-collapse:collapse; font-size:0.82rem;
+                    font-family:'Inter',sans-serif; }
+        .data-tbl th { background:#252d40; color:#b0b8c8; padding:8px 10px;
+                       text-align:left; border-bottom:2px solid #3498db;
+                       text-transform:uppercase; letter-spacing:0.04em; font-size:0.72rem; }
+        .data-tbl td { padding:7px 10px; border-bottom:1px solid #252d40; color:#d0d8e8; }
+        .data-tbl tr:hover td { background:#1f2638; }
+        .tbl-wrap { max-height:420px; overflow-y:auto; border:1px solid #252d40;
+                    border-radius:8px; background:#1a1f2e; }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+    html_tbl = display_tbl.to_html(index=False, classes="data-tbl", border=0)
+    st.markdown(f'<div class="tbl-wrap">{html_tbl}</div>', unsafe_allow_html=True)
+    st.caption(f"Showing {len(display_tbl):,} rows")
 
     st.download_button(
         label="Download filtered data as CSV",
