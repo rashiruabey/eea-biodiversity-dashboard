@@ -1,9 +1,0 @@
-﻿code,label,convert,permission
-gen,Genuine change,null,EU only
-genuine,Genuine change,yes,MS only
-knowledge,Improved knowledge/more accurate data,no,MS only
-method,Use of different method,no,MS only
-nc,No change,null,EU only
-noChange,No change,nc,MS only
-noInfo,No information on the nature of change,no,MS only
-nong,Non genuine change or no information,null,EU only

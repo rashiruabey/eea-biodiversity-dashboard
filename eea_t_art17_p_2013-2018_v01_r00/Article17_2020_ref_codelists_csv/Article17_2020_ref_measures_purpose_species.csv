@@ -1,5 +1,0 @@
-﻿code,label
-expand,Expand the current range of the species (related to ‘Range’)
-increase,"Increase the population size and/or improve population dynamics (improve reproduction success, reduce mortality, improve age/sex structure) (related to ‘Population’)"
-maintain,"Maintain the current range, population and/or habitat for the species"
-restore,Restore the habitat of the species (related to ‘Habitat for the species’)
