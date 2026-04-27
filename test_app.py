@@ -1,11 +1,11 @@
 """
-test_app.py — Test suite for EEA Article 17 Biodiversity Dashboard
+test_app.py - Test suite for EEA Article 17 Biodiversity Dashboard
 University of Westminster 5DATA004C
 
 Run with:  pytest test_app.py -v
 
 Five test classes map 1-to-1 to the five documented test cases (TC1–TC5).
-All tests use the real CSV data (integration tests) — no mocks.
+All tests use the real CSV data (integration tests) - no mocks.
 Fixtures are module-scoped so data loads once per session.
 """
 import pytest
@@ -48,7 +48,7 @@ def pressures_df():
 
 class TestTC1_DataLoading:
     """
-    TC1 — Data Loading and Structure Validation
+    TC1 - Data Loading and Structure Validation
 
     Description:
         Verify that all three primary CSV files load correctly, contain more
@@ -108,7 +108,7 @@ class TestTC1_DataLoading:
 
 class TestTC2_SpeciesGroupJoin:
     """
-    TC2 — Species Group Join Completeness
+    TC2 - Species Group Join Completeness
 
     Description:
         Verify that every species assessment row is enriched with a taxonomic
@@ -133,7 +133,7 @@ class TestTC2_SpeciesGroupJoin:
     def test_no_null_groups(self, species_df):
         null_count = species_df["group"].isna().sum()
         assert null_count == 0, (
-            f"Found {null_count} rows with missing 'group' — join failed for some species codes"
+            f"Found {null_count} rows with missing 'group' - join failed for some species codes"
         )
 
     def test_expected_taxonomic_groups_present(self, species_df):
@@ -154,14 +154,14 @@ class TestTC2_SpeciesGroupJoin:
 
     def test_join_coverage_is_100_percent(self, species_df):
         pct = 100 * species_df["group"].notna().mean()
-        assert pct == 100.0, f"Join coverage: {pct:.2f}% — expected 100%"
+        assert pct == 100.0, f"Join coverage: {pct:.2f}% - expected 100%"
 
 
 # ── TC3: FILTER FUNCTIONS ────────────────────────────────────────────────────
 
 class TestTC3_FilterFunctions:
     """
-    TC3 — Interactive Filter Accuracy
+    TC3 - Interactive Filter Accuracy
 
     Description:
         Verify that the filter_species(), filter_habitats(), and filter_pressures()
@@ -172,7 +172,7 @@ class TestTC3_FilterFunctions:
     Steps and input data:
         1. Apply single-country filter (country=['DE']) to species data
         2. Assert all returned rows have country == 'DE'
-        3. Apply no filters — assert row count unchanged
+        3. Apply no filters - assert row count unchanged
         4. Apply multi-country filter and assert result set
         5. Apply species group filter and assert result set
         6. Apply status filter to habitats
@@ -228,7 +228,7 @@ class TestTC3_FilterFunctions:
 
 class TestTC4_StatusDistribution:
     """
-    TC4 — Status Distribution Calculation
+    TC4 - Status Distribution Calculation
 
     Description:
         Verify that the status_dist() function correctly computes the count of
@@ -301,7 +301,7 @@ class TestTC4_StatusDistribution:
 
 class TestTC5_PressuresReferenceJoin:
     """
-    TC5 — Pressures / Threats Reference Code Join
+    TC5 - Pressures / Threats Reference Code Join
 
     Description:
         Verify that the join between data_pressures_threats.csv and

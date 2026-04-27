@@ -1,7 +1,7 @@
 """
 Europe's Biodiversity in Crisis
-EEA Article 17 — Conservation Status of Habitats and Species (2013-2018)
-University of Westminster — 5DATA004C Data Science Project Lifecycle
+EEA Article 17 - Conservation Status of Habitats and Species (2013-2018)
+University of Westminster - 5DATA004C Data Science Project Lifecycle
 """
 import streamlit as st
 import pandas as pd
@@ -181,7 +181,7 @@ def insight(text):
 
 
 # ── LOAD DATA ─────────────────────────────────────────────────────────────────
-with st.spinner("Loading dataset — please wait..."):
+with st.spinner("Loading dataset - please wait..."):
     sp_raw  = get_species()
     hab_raw = get_habitats()
     pt_raw  = get_pressures()
@@ -243,7 +243,7 @@ with st.sidebar:
     st.markdown("---")
     st.caption(
         "Source: European Environment Agency  \n"
-        "EEA Article 17 — Habitats Directive 92/43/EEC  \n"
+        "EEA Article 17 - Habitats Directive 92/43/EEC  \n"
         "Reporting period: 2013–2018"
     )
 
@@ -258,10 +258,10 @@ pt  = filter_pressures(pt_raw, sel_countries, sel_regions, feat_type, ranking_se
 # HERO
 # ─────────────────────────────────────────────────────────────────────────────
 st.markdown("""
-<div class="hero-eyebrow">European Environment Agency — Article 17 Conservation Assessment</div>
+<div class="hero-eyebrow">European Environment Agency - Article 17 Conservation Assessment</div>
 <div class="hero-title">Europe's Biodiversity in Crisis</div>
 <div class="hero-sub">
-An interactive analysis of conservation status across 28 EU Member States — covering
+An interactive analysis of conservation status across 28 EU Member States - covering
 1,383 species and 233 habitat types across 14 biogeographic regions.
 Data from the 2013–2018 Habitats Directive reporting period.
 </div>
@@ -274,8 +274,8 @@ n_sp       = len(sp)
 n_hab      = len(hab)
 n_unfav_sp = len(sp[sp["conclusion_assessment"].isin(["U1", "U2"])])
 n_unfav_h  = len(hab[hab["conclusion_assessment"].isin(["U1", "U2"])])
-pct_sp     = f"{100 * n_unfav_sp / n_sp:.0f}%" if n_sp else "—"
-pct_h      = f"{100 * n_unfav_h  / n_hab:.0f}%" if n_hab else "—"
+pct_sp     = f"{100 * n_unfav_sp / n_sp:.0f}%" if n_sp else "-"
+pct_h      = f"{100 * n_unfav_h  / n_hab:.0f}%" if n_hab else "-"
 n_countries = sp["country"].nunique()
 
 c1, c2, c3, c4 = st.columns(4)
@@ -300,7 +300,7 @@ divider()
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# ACT I — OVERALL STATUS DISTRIBUTION
+# ACT I - OVERALL STATUS DISTRIBUTION
 # ─────────────────────────────────────────────────────────────────────────────
 act("Act I", "The State of Nature",
     "How are Europe's species and habitats assessed overall? "
@@ -344,8 +344,8 @@ else:
     insight(
         f"<strong>Key finding:</strong> Only <strong>{sp_fv_pct:.0f}%</strong> of species assessments "
         f"and <strong>{hab_fv_pct:.0f}%</strong> of habitat assessments reach Favourable status. "
-        f"Habitats are in worse condition than species — a pattern consistent across most EU countries. "
-        f"The U2 (Unfavourable — Bad) category represents species and habitats in active decline "
+        f"Habitats are in worse condition than species - a pattern consistent across most EU countries. "
+        f"The U2 (Unfavourable - Bad) category represents species and habitats in active decline "
         f"with no realistic short-term recovery prospect."
     )
 
@@ -353,7 +353,7 @@ divider()
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# ACT II — COUNTRY RANKING
+# ACT II - COUNTRY RANKING
 # ─────────────────────────────────────────────────────────────────────────────
 act("Act II", "Where Is It Worst?",
     "Countries ranked by the proportion of species assessments with unfavourable status (U1 + U2). "
@@ -417,14 +417,14 @@ if n_sp > 0:
         f"<strong>Range:</strong> {worst_name} has the highest proportion of unfavourable species "
         f"assessments ({worst_val:.0f}%), while {best_name} has the lowest ({best_val:.0f}%). "
         f"Countries with large, ecologically diverse territories tend to report more assessments but "
-        f"also accumulate more unfavourable results — reflecting both genuine biodiversity stress and "
+        f"also accumulate more unfavourable results - reflecting both genuine biodiversity stress and "
         f"reporting thoroughness."
     )
 
     # ── Europe choropleth map ──────────────────────────────────────────────
     st.markdown(
         '<p style="font-size:0.82rem;color:#8892a4;margin:1.2rem 0 0.3rem;">'
-        '▸ Geographic view — hover over any country for full details</p>',
+        '▸ Geographic view - hover over any country for full details</p>',
         unsafe_allow_html=True,
     )
 
@@ -497,14 +497,14 @@ if n_sp > 0:
         ),
     )
     theme(fig_map, height=540, legend=False,
-          title_text="% Unfavourable Species Assessments — EU Member States")
+          title_text="% Unfavourable Species Assessments - EU Member States")
     st.plotly_chart(fig_map, width='stretch')
 
 divider()
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# ACT III — SPECIES GROUPS
+# ACT III - SPECIES GROUPS
 # ─────────────────────────────────────────────────────────────────────────────
 act("Act III", "Which Groups Are Suffering?",
     "Assessment breakdown across nine taxonomic groups covered by the Habitats Directive.")
@@ -598,7 +598,7 @@ divider()
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# ACT IV — TREND COMPARISON (2007-2012 vs 2013-2018)
+# ACT IV - TREND COMPARISON (2007-2012 vs 2013-2018)
 # ─────────────────────────────────────────────────────────────────────────────
 act("Act IV", "Are Things Getting Better or Worse?",
     "Direct comparison of conservation status between the previous (2007–2012) "
@@ -686,7 +686,7 @@ if n_comp > 0:
     delta_fv = int(curr_c["FV"]) - int(prev_c["FV"])
     insight(
         f"<strong>The picture is mixed but concerning:</strong> "
-        f"The number of assessments in the worst category (U2 — Unfavourable Bad) has increased by "
+        f"The number of assessments in the worst category (U2 - Unfavourable Bad) has increased by "
         f"<strong>{'+' if delta_u2 >= 0 else ''}{delta_u2:,}</strong> since the previous period. "
         f"Favourable assessments changed by "
         f"<strong>{'+' if delta_fv >= 0 else ''}{delta_fv:,}</strong>. "
@@ -698,7 +698,7 @@ divider()
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# ACT V — BIOGEOGRAPHIC REGIONS
+# ACT V - BIOGEOGRAPHIC REGIONS
 # ─────────────────────────────────────────────────────────────────────────────
 act("Act V", "A Regional Portrait",
     "Europe's 14 biogeographic regions span from the Arctic Boreal north to the "
@@ -778,7 +778,7 @@ divider()
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# ACT VI — PRESSURES & THREATS
+# ACT VI - PRESSURES & THREATS
 # ─────────────────────────────────────────────────────────────────────────────
 act("Act VI", "What Is Driving the Crisis?",
     "The most frequently reported pressures and threats ranked by number of reports. "
@@ -847,7 +847,7 @@ divider()
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# ACT VII — POPULATION vs RANGE TREND (bubble chart)
+# ACT VII - POPULATION vs RANGE TREND (bubble chart)
 # ─────────────────────────────────────────────────────────────────────────────
 act("Act VII", "Population vs Range Trends",
     "Each bubble shows how many species assessments share the same combination of "
@@ -903,7 +903,7 @@ if n_sp > 0:
             "pop_lbl":   trend_order7,
             "conclusion_assessment": STATUS_ORDER,
         },
-        title="Population Trend vs Range Trend — Bubble Size = Assessments",
+        title="Population Trend vs Range Trend - Bubble Size = Assessments",
     )
     fig7.update_traces(marker=dict(line=dict(width=0.5, color="#0e1117")))
     fig7.add_annotation(
@@ -925,7 +925,7 @@ if n_sp > 0:
     insight(
         "<strong>Reading the chart:</strong> Bubbles toward the bottom-left "
         "(Declining / Declining) represent species where both population size and "
-        "geographic range are contracting simultaneously — the most precarious situation. "
+        "geographic range are contracting simultaneously - the most precarious situation. "
         "The largest red (U2) bubbles reveal where the biodiversity crisis is most acute. "
         "Bubbles on the diagonal from bottom-left to top-right follow the expected "
         "covariance: range and population usually trend together."
@@ -935,7 +935,7 @@ divider()
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# ACT VIII — DATA EXPLORER
+# ACT VIII - DATA EXPLORER
 # ─────────────────────────────────────────────────────────────────────────────
 act("Act VIII", "Explore the Data",
     "Full filtered dataset. All sidebar filters apply. Download as CSV for offline analysis.")
@@ -1012,7 +1012,7 @@ divider()
 # ── FOOTER ────────────────────────────────────────────────────────────────────
 st.markdown(
     "<p style='text-align:center;color:#3d4450;font-size:0.8rem;'>"
-    "Data: European Environment Agency — Article 17, Habitats Directive 92/43/EEC, "
+    "Data: European Environment Agency - Article 17, Habitats Directive 92/43/EEC, "
     "2013–2018 reporting period. "
     "Dashboard developed for University of Westminster 5DATA004C, April 2026."
     "</p>",

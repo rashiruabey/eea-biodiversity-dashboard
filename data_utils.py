@@ -1,6 +1,6 @@
 """
 data_utils.py
-Pure data-loading and transformation functions — no Streamlit dependency.
+Pure data-loading and transformation functions - no Streamlit dependency.
 Imported by app.py (which wraps loaders with @st.cache_data) and by test_app.py.
 """
 import os
@@ -13,7 +13,8 @@ DATA_DIR = os.path.join(_BASE, "eea_t_art17_p_2013-2018_v01_r00",
 REF_DIR  = os.path.join(_BASE, "eea_t_art17_p_2013-2018_v01_r00",
                          "Article17_2020_ref_codelists_csv")
 
-# ── CONSTANTS ─────────────────────────────────────────────────────────────────
+# ── CONSTANTS ──────────────────────────────────────
+# ───────────────────────────
 STATUS_ORDER  = ["FV", "U1", "U2", "XX"]
 STATUS_COLORS = {
     "FV": "#27ae60",
@@ -23,8 +24,8 @@ STATUS_COLORS = {
 }
 STATUS_LABELS = {
     "FV": "Favourable",
-    "U1": "Unfavourable — Inadequate",
-    "U2": "Unfavourable — Bad",
+    "U1": "Unfavourable - Inadequate",
+    "U2": "Unfavourable - Bad",
     "XX": "Unknown",
 }
 TREND_LABELS = {
