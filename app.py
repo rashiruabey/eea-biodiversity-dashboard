@@ -328,10 +328,10 @@ else:
 
     with col_l:
         st.plotly_chart(donut(sp, "Species Status Distribution", n_sp),
-                        use_container_width=True)
+                        width='stretch')
     with col_r:
         st.plotly_chart(donut(hab, "Habitats Status Distribution", n_hab),
-                        use_container_width=True)
+                        width='stretch')
 
     sp_fv_pct  = 100 * len(sp[sp["conclusion_assessment"] == "FV"])  / n_sp
     hab_fv_pct = 100 * len(hab[hab["conclusion_assessment"] == "FV"]) / n_hab
@@ -401,13 +401,15 @@ if n_sp > 0:
         yaxis_title="",
     )
     theme(fig2, height=700, title_text="Species Assessment Status by Country (% of national total)")
-    st.plotly_chart(fig2, use_container_width=True)
+    st.plotly_chart(fig2, width='stretch')
 
-    worst = unfav_pct.iloc[-1]
-    best  = unfav_pct.iloc[0]
+    worst_name = unfav_pct.index[-1]
+    best_name  = unfav_pct.index[0]
+    worst_val  = unfav_pct.iloc[-1]
+    best_val   = unfav_pct.iloc[0]
     insight(
-        f"<strong>Range:</strong> {worst.name} has the highest proportion of unfavourable species "
-        f"assessments ({worst:.0f}%), while {best.name} has the lowest ({best:.0f}%). "
+        f"<strong>Range:</strong> {worst_name} has the highest proportion of unfavourable species "
+        f"assessments ({worst_val:.0f}%), while {best_name} has the lowest ({best_val:.0f}%). "
         f"Countries with large, ecologically diverse territories tend to report more assessments but "
         f"also accumulate more unfavourable results — reflecting both genuine biodiversity stress and "
         f"reporting thoroughness."
@@ -471,7 +473,7 @@ if n_sp > 0:
             yaxis_title="Number of Assessments",
         )
         theme(fig3a, height=400, title_text="Assessments by Taxonomic Group")
-        st.plotly_chart(fig3a, use_container_width=True)
+        st.plotly_chart(fig3a, width='stretch')
 
     with col3b:
         meta_sorted = grp_meta.set_index("group").reindex(order3).reset_index()
@@ -495,7 +497,7 @@ if n_sp > 0:
         )
         theme(fig3b, height=400, legend=False,
               title_text="% Unfavourable per Group")
-        st.plotly_chart(fig3b, use_container_width=True)
+        st.plotly_chart(fig3b, width='stretch')
 
     worst_grp = grp_meta.sort_values("pct_unfav", ascending=False).iloc[0]
     insight(
@@ -564,7 +566,7 @@ if n_comp > 0:
     )
     theme(fig4, height=420,
           title_text=f"{comp_tab} Status: 2007–2012 vs 2013–2018")
-    st.plotly_chart(fig4, use_container_width=True)
+    st.plotly_chart(fig4, width='stretch')
 
     # Current-period trend direction
     trend_c = (
@@ -593,7 +595,7 @@ if n_comp > 0:
     )
     theme(fig4b, height=330, legend=False,
           title_text="Current Period Trend Direction")
-    st.plotly_chart(fig4b, use_container_width=True)
+    st.plotly_chart(fig4b, width='stretch')
 
     delta_u2 = int(curr_c["U2"]) - int(prev_c["U2"])
     delta_fv = int(curr_c["FV"]) - int(prev_c["FV"])
@@ -657,7 +659,7 @@ if n_reg > 0:
     )
     theme(fig5, height=420,
           title_text=f"{reg_tab} Assessments by Biogeographic Region")
-    st.plotly_chart(fig5, use_container_width=True)
+    st.plotly_chart(fig5, width='stretch')
 
     # % unfavourable by region
     reg_unfav = (
@@ -685,7 +687,7 @@ if n_reg > 0:
     )
     theme(fig5b, height=380, legend=False,
           title_text="% Unfavourable by Biogeographic Region")
-    st.plotly_chart(fig5b, use_container_width=True)
+    st.plotly_chart(fig5b, width='stretch')
 
 divider()
 
@@ -739,7 +741,7 @@ else:
     )
     theme(fig6, height=max(360, n_top * 30), legend=False,
           title_text=f"Top {n_top} Reported Pressures / Threats")
-    st.plotly_chart(fig6, use_container_width=True)
+    st.plotly_chart(fig6, width='stretch')
 
     top_p = pt_agg.iloc[-1]
     insight(
@@ -833,7 +835,7 @@ if n_sp > 0:
     )
     fig7.update_layout(title_font_color="#ffffff")
     theme(fig7, height=480)
-    st.plotly_chart(fig7, use_container_width=True)
+    st.plotly_chart(fig7, width='stretch')
 
     insight(
         "<strong>Reading the chart:</strong> Bubbles toward the bottom-left "
