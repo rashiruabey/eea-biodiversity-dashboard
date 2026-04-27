@@ -86,6 +86,14 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 /* ── Divider ── */
 .hdivider { border: none; border-top: 1px solid #252d40; margin: 2.2rem 0; }
 
+/* ── Hide theme switcher (System / Light / Dark) from the ⋮ menu ── */
+button[aria-label="System"],
+button[aria-label="Light"],
+button[aria-label="Dark"] { display: none !important; }
+[data-testid="stMainMenuPopover"] div:has(button[aria-label="System"]) {
+    display: none !important;
+}
+
 /* ── Sidebar ── */
 section[data-testid="stSidebar"] {
     background: #131720; border-right: 1px solid #252d40;
@@ -414,6 +422,80 @@ if n_sp > 0:
         f"also accumulate more unfavourable results — reflecting both genuine biodiversity stress and "
         f"reporting thoroughness."
     )
+
+    # ── Europe choropleth map ──────────────────────────────────────────────
+    st.markdown(
+        '<p style="font-size:0.82rem;color:#8892a4;margin:1.2rem 0 0.3rem;">'
+        '▸ Geographic view — hover over any country for full details</p>',
+        unsafe_allow_html=True,
+    )
+
+    map_df = (
+        sp.groupby("country")
+        .agg(
+            total=("conclusion_assessment", "count"),
+            unfav=("conclusion_assessment", lambda x: x.isin(["U1", "U2"]).sum()),
+            fav=("conclusion_assessment",   lambda x: (x == "FV").sum()),
+            bad=("conclusion_assessment",   lambda x: (x == "U2").sum()),
+        )
+        .reset_index()
+    )
+    map_df["pct_unfav"]     = (100 * map_df["unfav"] / map_df["total"]).round(1)
+    map_df["country_name"]  = map_df["country"].map(COUNTRY_NAMES).fillna(map_df["country"])
+
+    fig_map = px.choropleth(
+        map_df,
+        locations="country",
+        locationmode="ISO-3166-1-alpha-2",
+        color="pct_unfav",
+        scope="europe",
+        color_continuous_scale=["#27ae60", "#f39c12", "#c0392b"],
+        range_color=[0, 100],
+        hover_name="country_name",
+        hover_data={
+            "pct_unfav": ":.1f",
+            "total": ":,",
+            "unfav": ":,",
+            "bad": ":,",
+            "country": False,
+        },
+        labels={
+            "pct_unfav": "% Unfavourable",
+            "total": "Total assessments",
+            "unfav": "Unfavourable (U1+U2)",
+            "bad": "Bad status (U2)",
+        },
+    )
+    fig_map.update_geos(
+        bgcolor="#1a1f2e",
+        lakecolor="#1a1f2e",
+        landcolor="#252d40",
+        oceancolor="#131720",
+        showocean=True,
+        showlakes=True,
+        showcoastlines=True,
+        coastlinecolor="#3d4460",
+        showframe=False,
+        showcountries=True,
+        countrycolor="#3d4460",
+        resolution=50,
+    )
+    fig_map.update_layout(
+        coloraxis_colorbar=dict(
+            title="%<br>Unfav",
+            ticksuffix="%",
+            len=0.65,
+            thickness=14,
+            bgcolor="#1a1f2e",
+            bordercolor="#252d40",
+            borderwidth=1,
+            tickfont=dict(color="#b0b8c8"),
+            titlefont=dict(color="#b0b8c8"),
+        ),
+    )
+    theme(fig_map, height=540, legend=False,
+          title_text="% Unfavourable Species Assessments — EU Member States")
+    st.plotly_chart(fig_map, width='stretch')
 
 divider()
 
