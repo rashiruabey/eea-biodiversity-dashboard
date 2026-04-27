@@ -86,13 +86,11 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 /* ── Divider ── */
 .hdivider { border: none; border-top: 1px solid #252d40; margin: 2.2rem 0; }
 
-/* ── Hide theme switcher (System / Light / Dark) from the ⋮ menu ── */
-button[aria-label="System"],
-button[aria-label="Light"],
-button[aria-label="Dark"] { display: none !important; }
-[data-testid="stMainMenuPopover"] div:has(button[aria-label="System"]) {
-    display: none !important;
-}
+/* ── Hide entire top-right toolbar (Share, GitHub, edit, ⋮ menu) ── */
+[data-testid="stToolbar"] { display: none !important; }
+#MainMenu                  { display: none !important; }
+/* ── Hide "Made with Streamlit" footer ── */
+footer, [data-testid="stFooter"] { display: none !important; }
 
 /* ── Sidebar ── */
 section[data-testid="stSidebar"] {
@@ -430,23 +428,28 @@ if n_sp > 0:
         unsafe_allow_html=True,
     )
 
-    map_df = (
-        sp.groupby("country")
-        .agg(
-            total=("conclusion_assessment", "count"),
-            unfav=("conclusion_assessment", lambda x: x.isin(["U1", "U2"]).sum()),
-            fav=("conclusion_assessment",   lambda x: (x == "FV").sum()),
-            bad=("conclusion_assessment",   lambda x: (x == "U2").sum()),
-        )
-        .reset_index()
-    )
-    map_df["pct_unfav"]     = (100 * map_df["unfav"] / map_df["total"]).round(1)
-    map_df["country_name"]  = map_df["country"].map(COUNTRY_NAMES).fillna(map_df["country"])
+    _ISO2_TO_ISO3 = {
+        "AT":"AUT","BE":"BEL","BG":"BGR","CY":"CYP","CZ":"CZE",
+        "DE":"DEU","DK":"DNK","EE":"EST","ES":"ESP","FI":"FIN",
+        "FR":"FRA","GR":"GRC","HR":"HRV","HU":"HUN","IE":"IRL",
+        "IT":"ITA","LT":"LTU","LU":"LUX","LV":"LVA","MT":"MLT",
+        "NL":"NLD","PL":"POL","PT":"PRT","RO":"ROU","SE":"SWE",
+        "SI":"SVN","SK":"SVK","UK":"GBR",
+    }
+
+    _totals  = sp.groupby("country").size().rename("total")
+    _unfav   = sp[sp["conclusion_assessment"].isin(["U1","U2"])].groupby("country").size().rename("unfav")
+    _bad     = sp[sp["conclusion_assessment"] == "U2"].groupby("country").size().rename("bad")
+    map_df   = pd.concat([_totals, _unfav, _bad], axis=1).fillna(0).reset_index()
+    map_df.columns = ["country", "total", "unfav", "bad"]
+    map_df["pct_unfav"]    = (100 * map_df["unfav"] / map_df["total"]).round(1)
+    map_df["country_name"] = map_df["country"].map(COUNTRY_NAMES).fillna(map_df["country"])
+    map_df["iso3"]         = map_df["country"].map(_ISO2_TO_ISO3)
 
     fig_map = px.choropleth(
         map_df,
-        locations="country",
-        locationmode="ISO-3166-1-alpha-2",
+        locations="iso3",
+        locationmode="ISO-3",
         color="pct_unfav",
         scope="europe",
         color_continuous_scale=["#27ae60", "#f39c12", "#c0392b"],
@@ -457,6 +460,7 @@ if n_sp > 0:
             "total": ":,",
             "unfav": ":,",
             "bad": ":,",
+            "iso3": False,
             "country": False,
         },
         labels={
@@ -482,7 +486,7 @@ if n_sp > 0:
     )
     fig_map.update_layout(
         coloraxis_colorbar=dict(
-            title="%<br>Unfav",
+            title=dict(text="%<br>Unfav", font=dict(color="#b0b8c8")),
             ticksuffix="%",
             len=0.65,
             thickness=14,
@@ -490,7 +494,6 @@ if n_sp > 0:
             bordercolor="#252d40",
             borderwidth=1,
             tickfont=dict(color="#b0b8c8"),
-            titlefont=dict(color="#b0b8c8"),
         ),
     )
     theme(fig_map, height=540, legend=False,
